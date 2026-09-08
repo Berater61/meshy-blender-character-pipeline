@@ -1,0 +1,60 @@
+{
+  "workspace_name": "IsekaiAscension_Workspace",
+  "minimum_reference_width": 512,
+  "minimum_reference_height": 512,
+  "automatic_unreal_import": false,
+  "meshy_calls_default_allowed": false,
+  "default_pipeline_version": "geometry-remesh-retexture-v1",
+  "legacy_processing_disabled_for_new_jobs": true,
+  "automatic_blender_baking": false,
+  "automatic_uv_data_transfer": false,
+  "automatic_texture_projection": false,
+  "automatic_sculpting": false,
+  "automatic_smoothing": false,
+  "merge_by_distance_default": false,
+  "reuse_pre_remeshed_generation_textures": false,
+  "automatic_rigging": false,
+  "final_mesh_approved_credit_cap": 35,
+  "meshy_task_timeout_minutes": 30,
+  "meshy_poll_seconds": 10,
+  "blender_validation_timeout_minutes": 10,
+  "quality_profiles": {
+    "direct-character-35-v1": {
+      "direct_full_build": true,
+      "stop_after_remesh": false,
+      "require_manual_remesh_approval": false,
+      "automatic_continue_to_retexture": true,
+      "geometry_generation": {
+        "enabled": true,
+        "provider": "meshy",
+        "endpoint": "multi-image-to-3d",
+        "ai_model": "latest",
+        "pose_mode": "a-pose",
+        "should_texture": false,
+        "should_remesh": false,
+        "image_enhancement": false,
+        "target_formats": ["glb"],
+        "expected_credits": 20
+      },
+      "final_remesh": {
+        "enabled": true,
+        "topology": "quad",
+        "target_polycount": 60000,
+        "target_formats": ["glb"],
+        "expected_credits": 5
+      },
+      "final_retexture": {
+        "enabled": true,
+        "ai_model": "latest",
+        "enable_original_uv": false,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": ["glb", "fbx"],
+        "expected_credits": 10
+      },
+      "expected_total_credits": 35,
+      "maximum_parallel_download_workers": 4
+    }
+  }
+}

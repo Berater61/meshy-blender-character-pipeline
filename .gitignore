@@ -1,0 +1,51 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local history and generated pipeline state
+Backups/
+*.log
+*.part
+status.json
+pipeline_state.json
+
+# Generated jobs and 3D assets
+00_INPUT_SNAPSHOT/
+10_WORK/
+20_BLENDER/
+30_EXPORTS/
+40_PREVIEWS/
+50_REPORTS/
+60_LOGS/
+02_JOBS/
+03_UNREAL_READY/
+*.blend
+*.blend1
+*.fbx
+*.glb
+*.gltf
+*.obj
+*.stl
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
